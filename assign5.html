@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/assign5.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="js/assign5.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h1>JobSearch - Sign Up</h1>
+      </div>
+      <form id="signup" action="https://httpbin.org/post" method="POST" onsubmit="return validate();">
+        <div class="form-container">
+          <h2 class="container-header">Create Your Account</h2>
+          <p class="danger">* Required information</p>
+          <div class="form-section">
+            <div class="form-section-header">
+              <p><strong>Basic Information</strong></p>
+            </div>
+            <label for="form-email">Email <span class="danger">*</span></label>
+            <input name="email" type="email" id="form-email" autofocus required>
+            <br>
+            <label for="form-password">Password <span class="danger">*</span></label>
+            <input name="password" type="password" id="form-password" onchange="valPassword();" required>
+            <div class="error" id="invalidPassword"></div>
+            <label for="form-repassword">Retype Password <span class="danger">*</span></label>
+            <input name="re-password" type="password" id="form-repassword" onchange="valRePassword();" required>
+            <div class="error" id="invalidRePassword"></div>
+            <label for="form-fname">First Name <span class="danger">*</span></label>
+            <input name="first-name" type="text" id="form-fname" onchange="valFName();" required>
+            <div class="error" id="invalidFName"></div>
+            <label for="form-lname">Last Name <span class="danger">*</span></label>
+            <input name="last-name" type="text" id="form-lname" onchange="valLName();" required>
+            <div class="error" id="invalidLName"></div>
+            <label for="form-tel">Phone Number <span class="danger">*</span></label>
+            <input name="tel-number" type="tel" id="form-tel" placeholder="999-999-9999" onchange="valTel();" required>
+            <div class="error" id="invalidTel"></div>
+            <label for="form-address">Address <span class="danger">*</span></label>
+            <input name="address" type="text" id="form-address" required>
+            <br>
+            <label for="form-city">City <span class="danger">*</span></label>
+            <input name="city" type="text" id="form-city" required>
+            <br>
+            <label for="form-province">Province <span class="danger">*</span></label>
+            <select name="province" id="form-province">
+              <option value="">-select-</option>
+              <optgroup label="Provinces">
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+              </optgroup>
+              <optgroup label="Territories">
+                <option value="NT">Northwest Territories</option>
+                <option value="YT">Yukon</option>
+                <option value="NU">Nunavut</option>
+              </optgroup>
+            </select>
+            <br>
+            <label for="form-country">Country <span class="danger">*</span></label>
+            <input name="country" type="text" list="countries" id="form-country" required>
+            <datalist id="countries">
+              <option value="Canada">
+              <option value="The United States">
+              <option value="The Netherlands">
+              <option value="Germany">
+              <option value="Japan">
+            </datalist>
+          </div>
+          <div class="form-section">
+            <div class="form-section-header">
+              <p><strong>Education</strong></p>
+            </div>
+            <label for="form-school">School <span class="danger">*</span></label>
+            <input name="school" type="text" id="form-school" required>
+            <br>
+            <label for="form-program">Program <span class="danger">*</span></label>
+            <input name="program" type="text" id="form-program" required>
+            <br>
+            <label for="form-edLevel">Education Level <span class="danger">*</span></label>
+            <select name="education-level" id="form-edLevel" required>
+              <option value="">-select-</option>
+              <option value="technical">Technical Diploma</option>
+              <option value="college">College Diploma</option>
+              <option value="bachelor">Bachelor's Degree</option>
+              <option value="master">Master's Degree</option>
+              <option value="other">Others</option>
+            </select>
+            <br>
+            <fieldset>
+              <legend>Education Status</legend>
+              <input name="status" value="graduated" type="radio" class="radio" id="radio1" required>
+              <label for="radio1" class="radiolabel">Graduated</label>
+              <br>
+              <input name="status" value="enrolled" type="radio" class="radio" id="radio2" required>
+              <label for="radio2" class="radiolabel">Currently Enrolled</label>
+              <br>
+              <input name="status" value="notgraduate" type="radio" class="radio" id="radio3" required>
+              <label for="radio3" class="radiolabel">Did Not Graduate</label>
+              <br>
+              <div class="error" id="invalidSelection"></div>
+            </fieldset>
+            <label for="form-edDate">Graduation Date <span class="danger">*</span></label>
+            <input name="grad-date" type="text" id="form-edDate" required>
+          </div>
+          <div class="form-section">
+            <div class="form-section-header">
+              <p><strong>Work Experience</strong></p>
+            </div>
+            <label for="form-employer">Employer:</label>
+            <input name="employer" type="text" id="form-employer">
+            <br>
+            <label for="form-jobTitle">Job Title:</label>
+            <input name="title" type="text" id="form-jobTitle">
+            <br>
+            <label for="form-jobDuty" id="dutylabel">Job Duty:</label>
+            <textarea name="duty" rows="4" id="form-jobDuty"></textarea>
+            <br>
+            <label for="form-jobYears">Years Worked:</label>
+            <input name="years" type="number" id="form-jobYears" min="1" max="20">
+          </div>
+          <div class="form-section">
+            <div class="form-section-header">
+              <p><strong>Attachments</strong></p>
+            </div>
+            <label for="form-file">Attachments:</label>
+            <input name="file" type="file" id="form-file" multiple>
+          </div>
+          <div class="buttons">
+            <input type="reset" value="Reset" class="btn reset" id="form-reset">
+            <input type="submit" value="Apply" class="btn" id="form-submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

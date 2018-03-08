@@ -1,0 +1,145 @@
+body {
+  background: lightgray;
+}
+
+.card {
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  border-radius: 3px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  box-shadow: 0 1px 3px 1px gray;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-header {
+  background: cornflowerblue;
+  color: white;
+  padding: 30px 10px 5px 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.3em;
+}
+
+.card h1, h2, p {
+  margin: 0;
+}
+
+.form-container {
+  padding: 30px 20px;
+}
+
+.container-header{
+  margin-bottom: 30px;
+}
+
+.danger {
+  color: red;
+}
+
+.form-section {
+  margin: 15px 0;
+  background: #F5F5F5;
+  padding-bottom: 20px;
+  width: 100%;
+  display: inline-block;
+}
+
+.form-section-header {
+  background: #DCDCDC;
+  text-align: left;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+.form-section label {
+  display: inline-block;
+  width: 135px;
+  margin-left: 10.5vw;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.form-section input, select, textarea {
+  border-radius: 4px;
+  border: 2px solid gray;
+  height: 22px;
+  box-shadow: 2px 2px 3px 1px darkgray;
+  display: inline-block;
+  margin-top: 15px;
+  width:20vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-left: 18.5vw;
+  margin-top: 2px;
+}
+
+.form-section select {
+  width: 20.3vw;
+  height: 29px;
+}
+
+.form-section input:focus {
+  border: 2px solid cornflowerblue;
+  box-shadow: 2px 2px 3px 1px cornflowerblue;
+}
+
+fieldset {
+  margin: 10px 0 0 18.5vw;
+  display: block;
+  width: 19vw;
+  border-radius: 8px;
+  background: white;
+  border: 2px solid gray;
+  box-shadow: 2px 2px 3px 1px darkgray;
+}
+
+.form-section .radio {
+  width: 2%;
+  margin: 0 10px;
+  height: 0;
+}
+
+.form-section .radiolabel {
+  margin: 0;
+  text-align: left;
+}
+
+#dutylabel {
+  position: relative;
+  top: 15px;
+}
+
+.form-section textarea {
+  height: 104px;
+  vertical-align: top;
+}
+
+.buttons {
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  background: white;
+  height: 35px;
+  width: 70px;
+  border-radius: 5px;
+  border: 2px solid cornflowerblue;
+  margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  color: cornflowerblue;
+}
+
+.reset {
+  margin-right: 15px;
+}
